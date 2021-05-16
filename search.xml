@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title></title>
+      <link href="2021/05/16/spring-mvc-zhi-xing-yuan-li/"/>
+      <url>2021/05/16/spring-mvc-zhi-xing-yuan-li/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><hr><p>title:Spring MVC 执行原理<br>date:2021-5-16<br>tags:Spring</p><hr><h1 id="Spring-MVC-执行原理"><a href="#Spring-MVC-执行原理" class="headerlink" title="Spring MVC 执行原理"></a>Spring MVC 执行原理</h1><p><img src="https://study-java.oss-cn-beijing.aliyuncs.com/JAVA/SpringMVC/2020071709495130.png"></p><p><strong>图为SpringMVC的一个较完整的流程图，实线表示SpringMVC框架提供的技术，不需要开发者实现，虚线表示需要开发者实现。</strong></p><p><img src="!%5Bimg%5D(https://img-blog.csdnimg.cn/20200611074159497.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzNDMxMTcx,size_16,color_FFFFFF,t_70"></p><ol><li>用户发送请求至前端控制器DispatcherServlet，进行分发处理。</li><li>DispatcherServlet收到请求调用处理器映射器HandlerMapping。</li><li>处理器映射器根据请求url找到具体的处理器，生成处理器执行链HandlerExecutionChain(包括处理器对象和处理器拦截器)一并返回给DispatcherServlet。</li><li>DispatcherServlet根据处理器Handler获取处理器适配器HandlerAdapter执行HandlerAdapter处理一系列的操作，如：参数封装，数据格式转换，数据验证等操作。</li><li>执行处理器Handler(Controller，也叫页面控制器)。</li><li>Handler执行完成返回ModelAndView。</li><li>HandlerAdapter将Handler执行结果ModelAndView返回到DispatcherServlet。</li><li>DispatcherServlet将ModelAndView传给ViewReslover视图解析器。</li><li>ViewReslover解析后返回具体View。</li><li>DispatcherServlet对View进行渲染视图（即将模型数据model填充至视图中）。</li><li>最终DispatcherServlet响应用户。</li></ol>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>重庆欢乐谷一日游</title>
       <link href="2021/04/05/chong-qing-huan-le-gu-yi-ri-you/"/>
       <url>2021/04/05/chong-qing-huan-le-gu-yi-ri-you/</url>
